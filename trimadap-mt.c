@@ -290,7 +290,7 @@ int main(int argc, char *argv[])
 	ta_opt_t opt;
 
 	ta_opt_init(&opt);
-	while ((c = getopt(argc, argv, "5:3:s:p:l:t:v")) >= 0) {
+	while ((c = getopt(argc, argv, "5:3:s:d:p:l:t:v")) >= 0) {
 		if (c == '5' || c == '3') ta_opt_add_adap(&opt, c - '0', optarg);
 		else if (c == 's') opt.min_sc = atoi(optarg);
 		else if (c == 'd') opt.max_diff = atof(optarg);
